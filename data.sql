@@ -33,7 +33,7 @@ INSERT INTO people(first_name, surname, location) VALUES
   ('Amanda', 'Bertwistle', 'Nazareth'),
   ('David', 'Grewal', NULL),
   ('John', 'White', 'London'),
-  ('Peter', 'Hallam-Wistle', 'London'),
+  ('Paul', 'Hallam-Wistle', 'London'),
   ('Paul', 'Jones', 'Nazareth')
 RETURNING ID;
 
@@ -58,6 +58,7 @@ INSERT INTO knows(person_id, language_id, rating) VALUES
   (1, 10, 3),
   (1, 7, 2),
   (2, 1, 1),
+  (2, 4, 8),
   (3, 8, 8),
   (3, 6, 4),
   (3, 5, 8),
