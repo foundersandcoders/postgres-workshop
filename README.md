@@ -8,24 +8,24 @@ We will be working with the dataset in the `data.sql` file [to be written!]. Ple
 
 Confirm that you have Postgres installed and running on your computer.
 
-In a separate terminal window or tab run the command `psql --file=data.sql`. This will connect to your Postgres and run all of the SQL in `data.sql`, which will set things up for us.
+In a separate terminal window or tab run the command `psql --file=data.sql`. This will connect to your Postgres and run all of the SQL in `data.sql`. This will set up our database for us.
 
 ## The challenges
 
-[TODO - should we have one fairly simple example for each bullet point and then a couple of harder ones for people to work through?]
+* Find all of the people.
 
-* Retrieve everything from a table
+* Find everyone who is not in Nazareth.
 
-* Retrieve specific columns
+* Find everyone with 'Wistle' in their surname.
 
-* Retrieve only rows matching a condition
+* Find everyone who knows at least three languages.
 
-* Search using strings
+* Find the most popular five languages as measured by the sum of the ratings. Order them by name. Then make a separate query that orders by popularity.
 
-* Ordering results
+* Find the language(s) with the lowest rating.
 
-* Retrieving the max/min value from a column
+* Find all languages released after 1st Jan 1996, ordered by the number of people who know them.
 
-* Something requiring inner join
+* What's the most well-known server-side language? And client-side?
 
-* Something requiring outer join
+* Return a list of everyon with their most-liked language.
