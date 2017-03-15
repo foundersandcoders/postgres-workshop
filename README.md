@@ -18,8 +18,6 @@ Don't forget to use semicolons at the end of commands.
 
 ## The challenges
 
-TODO - change SQL so that some tasks only require a single join. It's a bit much to jump straight into multiple joins but hard to think of relatively simple tasks with the way the tables are setup now.
-
 ### Introductory
 
 These challenges cover the basics of SQL: selects, joins and conditions.
