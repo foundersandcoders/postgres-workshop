@@ -38,7 +38,7 @@ INSERT INTO people(first_name, surname, location) VALUES
   ('Paul', 'Jones', 'Nazareth')
 RETURNING ID;
 
-INSERT INTO languages(name, environment, release_date) VALUES
+INSERT INTO languages(name, environment, release_date, created_by) VALUES
   ('Python', 'server', '26-Jan-94', 3),
   ('SQL', 'server', '01-Jun-79', 1),
   ('JavaScript', 'full-stack', '18-Sep-95', 5),
