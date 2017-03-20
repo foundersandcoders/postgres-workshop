@@ -16,7 +16,8 @@ CREATE TABLE languages (
   id           serial       PRIMARY KEY,
   name         varchar(100) NOT NULL,
   environment  environment  NOT NULL,
-  release_date date         NOT NULL      
+  release_date date         NOT NULL,
+  created_by   integer	    REFERENCES people(id) ON UPDATE CASCADE
 );
 
 CREATE TABLE knows (
@@ -37,17 +38,17 @@ INSERT INTO people(first_name, surname, location) VALUES
   ('Paul', 'Jones', 'Nazareth')
 RETURNING ID;
 
-INSERT INTO languages(name, environment, release_date) VALUES
-  ('Python', 'server', '26-Jan-94'),
-  ('SQL', 'server', '01-Jun-79'),
-  ('JavaScript', 'full-stack', '18-Sep-95'),
-  ('Java', 'full-stack', '23-Jan-96'),
-  ('Elm', 'client', '01-Apr-12'),
-  ('CSS', 'client', '10-Oct-94'),
-  ('Ruby', 'server', '25-Dec-96'),
-  ('C++', 'server', '01-Oct-85'),
-  ('CoffeeScript', 'client', '24-Dec-09'),
-  ('Swift', 'full-stack', '02-Jun-14')
+INSERT INTO languages(name, environment, release_date, created_by) VALUES
+  ('Python', 'server', '26-Jan-94', 3),
+  ('SQL', 'server', '01-Jun-79', 1),
+  ('JavaScript', 'full-stack', '18-Sep-95', 5),
+  ('Java', 'full-stack', '23-Jan-96', 8),
+  ('Elm', 'client', '01-Apr-12', 8),
+  ('CSS', 'client', '10-Oct-94', 8),
+  ('Ruby', 'server', '25-Dec-96', 3),
+  ('C++', 'server', '01-Oct-85', 1),
+  ('CoffeeScript', 'client', '24-Dec-09', 2),
+  ('Swift', 'full-stack', '02-Jun-14', 8)
 RETURNING ID;
 
 /* We are hard-coding ID values because we know the tables will be empty and can start from 1.

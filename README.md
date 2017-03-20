@@ -85,6 +85,10 @@ These challenges cover the basics of SQL: selects, joins and conditions.
 
 * Find everyone with 'Wistle' in their surname (bonus points for case insensitivity).
 
+* Find the first name and surname of the person who created Python.
+
+* Find all the languages that Paul Jones created.
+
 * Find all the languages that Paul Jones knows.
 
 * Show a list of everyone and the client-side languages they know (one row per language).
@@ -102,3 +106,11 @@ These slightly trickier challenges will require you to use [aggregate functions]
 * Find all languages released after 1st Jan 1996, ordered by the number of people who know them.
 
 * What's the most well-known server-side language? And client-side?
+
+### Hard
+
+Doing these is not required! Only look at these if you have time at the end.
+
+* Show each person and their favourite language.
+
+* Show the first name and surname of each person who has created a language along with the name of their most popular language. Try calculating popularity as the sum of the language's ratings and then using its average rating to see if they give different results.
