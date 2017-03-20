@@ -13,6 +13,7 @@ If you are using a Mac you can just download and run [this app](https://postgres
 If you are using Ubuntu then it may be already installed on your computer. To check, run:
 
 `which psql`
+
 `which postgresql`
 
 You should get the path to each program as output. If either of them doesn't show anything, run:
@@ -44,7 +45,9 @@ Slightly confusingly, `psql` has its own set of commands that are entirely diffe
 Once you are in `psql` try some of the following commands:
 
 `\d` - list all tables (know as 'relations' in psql)
+
 `\d languages` - give information on a table (change 'languages' to the name of the table you're interested in)
+
 `\l` - list all databases
 
 ## Syntax hints
