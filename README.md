@@ -32,7 +32,7 @@ Once you are in `psql` try some of the following commands:
 
 `\d` - list all tables (know as 'relations' in psql)
 
-`\d languages` - give information on a table (change 'languages' to the name of the table you're interested in)
+`\d [table name]` - give information on a given table
 
 `\l` - list all databases
 
