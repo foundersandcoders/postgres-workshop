@@ -1,8 +1,5 @@
 BEGIN;
 
-DROP TABLE IF EXISTS people, languages, knows CASCADE;
-DROP TYPE IF EXISTS environment;
-
 DROP TABLE IF EXISTS authors, books, publishers, book_authors CASCADE;
 
 CREATE TABLE authors (
@@ -21,7 +18,7 @@ CREATE TABLE books (
   id           serial       PRIMARY KEY,
   name         varchar(100) NOT NULL,
   release_date date         NOT NULL,
-  publisher    integer	    REFERENCES publishers(id) ON UPDATE CASCADE
+  publisher_id integer	    REFERENCES publishers(id) ON UPDATE CASCADE
 );
 
 CREATE TABLE book_authors (
@@ -47,14 +44,14 @@ INSERT INTO publishers(name) VALUES
   ('Mega Corp Ltd')
 RETURNING ID;
 
-INSERT INTO books(name, release_date, publisher) VALUES
+INSERT INTO books(name, release_date, publisher_id) VALUES
   ('Python Made Easy', '26-Jan-94', 3),
   ('SQL: Part 2', '01-Jun-79', 1),
   ('JavaScript: The Really Good Parts', '18-Sep-95', 3),
   ('Java in Japanese', '23-Jan-96', 2),
   ('Elm Street', '01-Apr-12', 4),
   ('CSS: Cansei', '10-Oct-94', 1),
-  ('Ruby Gems', '25-Dec-96', 3),
+  ('Ruby Gems', '25-Dec-96', 2),
   ('C++', '06-Jul-17', 1),
   ('CoffeeScript in Java', '24-Dec-09', 2),
   ('Swift in 10 Days', '02-Jun-14', 2)
