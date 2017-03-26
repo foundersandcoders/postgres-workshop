@@ -3,31 +3,33 @@ BEGIN;
 DROP TABLE IF EXISTS people, languages, knows CASCADE;
 DROP TYPE IF EXISTS environment;
 
-CREATE TABLE people (
+DROP TABLE IF EXISTS authors, books, publishers, book_authors CASCADE;
+
+CREATE TABLE authors (
   id            serial        PRIMARY KEY,
   first_name    varchar(100)  NOT NULL,
   surname       varchar(100)  NOT NULL,
   location      varchar(100)
 );
 
-CREATE TYPE environment AS ENUM ('client', 'server', 'full-stack');
-
-CREATE TABLE languages (
+CREATE TABLE books (
   id           serial       PRIMARY KEY,
   name         varchar(100) NOT NULL,
-  environment  environment  NOT NULL,
   release_date date         NOT NULL,
-  created_by   integer	    REFERENCES people(id) ON UPDATE CASCADE
+  publisher    integer	    REFERENCES publishers(id) ON UPDATE CASCADE
 );
 
-CREATE TABLE knows (
-  person_id   integer REFERENCES people(id) ON UPDATE CASCADE,
-  language_id integer REFERENCES languages(id) ON UPDATE CASCADE,
-  rating      integer NOT NULL,
-  CONSTRAINT  like_pk PRIMARY KEY (person_id, language_id)
+CREATE TABLE publishers (
+  id      serial PRIMARY KEY,
+  name    varchar(100) NOT NULL,
 );
 
-INSERT INTO people(first_name, surname, location) VALUES
+CREATE TABLE book_authors (
+  book_id   integer REFERENCES books(id) ON UPDATE CASCADE,
+  author_id integer REFERENCES authors(id) ON UPDATE CASCADE
+);
+
+INSERT INTO authors(first_name, surname, location) VALUES
   ('Sharon', 'Smith', 'Nazareth'),
   ('Ted', 'Burns', 'London'),
   ('Stephen', 'Wistle', NULL),
@@ -38,47 +40,54 @@ INSERT INTO people(first_name, surname, location) VALUES
   ('Paul', 'Jones', 'Nazareth')
 RETURNING ID;
 
-INSERT INTO languages(name, environment, release_date, created_by) VALUES
-  ('Python', 'server', '26-Jan-94', 3),
-  ('SQL', 'server', '01-Jun-79', 1),
-  ('JavaScript', 'full-stack', '18-Sep-95', 5),
-  ('Java', 'full-stack', '23-Jan-96', 8),
-  ('Elm', 'client', '01-Apr-12', 8),
-  ('CSS', 'client', '10-Oct-94', 8),
-  ('Ruby', 'server', '25-Dec-96', 3),
-  ('C++', 'server', '01-Oct-85', 1),
-  ('CoffeeScript', 'client', '24-Dec-09', 2),
-  ('Swift', 'full-stack', '02-Jun-14', 8)
+INSERT INTO publishers(name) VALUES
+  'The Big Publishing House',
+  'McGraw-Hill',
+  'No Starch Press',
+  'Mega Corp Ltd'
+RETURNING ID;
+
+INSERT INTO books(name, release_date, publisher) VALUES
+  ('Python Made Easy', '26-Jan-94', 3),
+  ('SQL: Part 2', '01-Jun-79', 1),
+  ('JavaScript: The Really Good Parts', '18-Sep-95', 3),
+  ('Java in Japanese', '23-Jan-96', 2),
+  ('Elm Street', '01-Apr-12', 4),
+  ('CSS: Cansei', '10-Oct-94', 1),
+  ('Ruby Gems', '25-Dec-96', 3),
+  ('C++', 'server', 1),
+  ('CoffeeScript in Java', '24-Dec-09', 2),
+  ('Swift in 10 Days', '02-Jun-14', 2)
 RETURNING ID;
 
 /* We are hard-coding ID values because we know the tables will be empty and can start from 1.
    Don't do this! In Real Life you would write a script to build up the relations instead. */
-INSERT INTO knows(person_id, language_id, rating) VALUES
-  (1, 9, 7),
-  (1, 4, 9),
-  (1, 10, 3),
-  (1, 7, 2),
-  (2, 1, 1),
-  (2, 4, 8),
-  (3, 8, 8),
-  (3, 6, 4),
-  (3, 5, 8),
-  (3, 1, 2),
-  (3, 2, 9),
-  (4, 6, 7),
-  (4, 3, 5),
-  (5, 4, 9),
-  (5, 10, 5),
-  (5, 8, 6),
-  (6, 8, 8),
-  (6, 4, 5),
-  (7, 3, 0),
-  (7, 5, 1),
-  (7, 4, 2),
-  (7, 7, 7),
-  (8, 1, 9),
-  (8, 8, 5),
-  (8, 9, 7),
-  (8, 5, 5);
+INSERT INTO book_authors(book_id, person_id) VALUES
+  (9, 7),
+  (4, 4),
+  (10, 3),
+  (7, 2),
+  (1, 1),
+  (4, 8),
+  (8, 8),
+  (6, 4),
+  (5, 6),
+  (1, 5),
+  (2, 1),
+  (6, 7),
+  (3, 5),
+  (4, 3),
+  (10, 5),
+  (8, 6),
+  (8, 8),
+  (4, 5),
+  (3, 3),
+  (5, 1),
+  (4, 2),
+  (7, 7),
+  (1, 4),
+  (8, 5),
+  (9, 7),
+  (5, 5);
 
 COMMIT;
