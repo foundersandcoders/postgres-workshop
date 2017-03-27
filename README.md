@@ -216,7 +216,7 @@ Swift in 10 Days                  | David      | Grewal
 
 ### Intermediate
 
-These slightly trickier challenges will require you to use [aggregate functions](https://www.tutorialspoint.com/PostgreSQLql/PostgreSQLql_useful_functions.htm) and/or [subqueries](http://www.PostgreSQLqltutorial.com/PostgreSQLql-subquery/)
+These slightly trickier challenges will require you to use [aggregate functions](https://www.postgresql.org/docs/9.6/static/tutorial-agg.html) and/or [subqueries](https://www.tutorialspoint.com/postgresql/postgresql_sub_queries.htm).
 
 #### Find everyone who wrote at least three books
 
