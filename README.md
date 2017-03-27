@@ -220,13 +220,49 @@ Swift in 10 Days                  | David      | Grewal
 
 These slightly trickier challenges will require you to use [aggregate functions](https://www.tutorialspoint.com/PostgreSQLql/PostgreSQLql_useful_functions.htm) and/or [subqueries](http://www.PostgreSQLqltutorial.com/PostgreSQLql-subquery/)
 
-* Find everyone who wrote at least three books.
+#### Find everyone who wrote at least three books
 
-* Order the publishers by the number of books they have published.
+##### Expected result
 
-* Find all books released after 1st Jan 1996, ordered by the number of people who wrote them.
+first_name |    surname
+--- | ---
+Paul       | Jones
+Stephen    | Wistle
+Amanda     | Bertwistle
+Sharon     | Smith
+David      | Grewal
+Paul       | Hallam-Wistle
 
-* What's the highest number of authors per book? The lowest?
+#### Order the publishers by the number of books they have published.
+
+##### Expected result
+
+name | count
+--- | ---
+McGraw-Hill              |     4
+The Big Publishing House |     3
+No Starch Press          |     2
+Mega Corp Ltd            |     1
+
+#### Find all books released after 1st Jan 1996, ordered by the number of people who wrote them.
+
+##### Expected result
+
+name | count
+--- | ---
+Java in Japanese     |     5
+C++                  |     4
+Elm Street           |     3
+Ruby Gems            |     2
+CoffeeScript in Java |     2
+Swift in 10 Days     |     2
+
+#### What's the highest number of authors per book? The lowest?
+
+##### Expected results
+
+Highest: 'Java in Japanese'.
+Lowest: 'SQL: Part 2'
 
 ### Hard
 
