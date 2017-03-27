@@ -138,7 +138,7 @@ id | first_name |    surname    | location
 7 | Paul       | Hallam-Wistle | London
 8 | Paul       | Jones         | Nazareth
 
-#### Find everyone who is not in Nazareth
+#### Find everyone who is not in Nazareth (including nulls)
 
 ##### Expected result
 

@@ -6,10 +6,11 @@ SELECT first_name, surname FROM authors;
 
 SELECT first_name, surname FROM authors ORDER BY surname LIMIT 3;
 
-/* Find everyone who is not in Nazareth */
+/* Find everyone who is not in Nazareth (including nulls) */
 
 SELECT * FROM authors
-WHERE location <> 'Nazareth';
+WHERE location <> 'Nazareth'
+OR location IS NULL;
 
 /* Find everyone who has a location specified */
 
