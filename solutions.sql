@@ -32,12 +32,12 @@ INNER JOIN books
 ON books.publisher_id = publishers.id
 WHERE books.name = 'Python Made Easy';
 
-/* Find all the books published by 'McGraw-Hill'. */
+/* Find all the books published by 'No Starch Press'. */
 
 SELECT publishers.name, books.name FROM publishers
 INNER JOIN books
 ON books.publisher_id = publishers.id
-WHERE publishers.name = 'McGraw-Hill';
+WHERE publishers.name = 'No Starch Press';
 
 /*Show a list of every book and their authors (one row per author). */
 

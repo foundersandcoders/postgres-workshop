@@ -172,10 +172,8 @@ id | first_name |    surname    | location
 
 name | name
 --- | ---
-McGraw-Hill | Java in Japanese
-McGraw-Hill | Ruby Gems
-McGraw-Hill | CoffeeScript in Java
-McGraw-Hill | Swift in 10 Days
+No Starch Press | Python Made Easy
+No Starch Press | JavaScript: The Really Good Parts
 
 #### Show a list of every book and their authors (one row per author)
 
