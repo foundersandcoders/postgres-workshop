@@ -266,6 +266,8 @@ Lowest: 'SQL: Part 2'
 
 Doing these is not required! Only look at these if you have time at the end.
 
+* I forgot to make a primary key for books_authors table. Alter the table to create a new column to contain a primary key made up of 'book_id' and 'author_id'.
+
 * What's the average number of authors per book?
 
 * Show every author who has only written for one publisher.
