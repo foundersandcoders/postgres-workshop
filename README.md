@@ -100,23 +100,121 @@ Please don't feel that you have to get through all of them or be able to answer 
 
 These challenges cover the basics of SQL: selects, joins and conditions.
 
-* Find the first name and surname of every author.
+#### Find the first name and surname of every author
 
-* Sort everyone by surname and find the first three.
+##### Expected result
 
-* Find everyone who is not in Nazareth.
+first_name |    surname
+--- | ---
+Sharon     | Smith
+Ted        | Burns
+Stephen    | Wistle
+Amanda     | Bertwistle
+David      | Grewal
+John       | White
+Paul       | Hallam-Wistle
+Paul       | Jones
 
-* Find everyone who has a location specified.
+#### Sort everyone by surname and find the first three
 
-* Find everyone with 'Wistle' in their surname (bonus points for case insensitivity).
+##### Expected result
 
-* Find the name of the publisher who released 'Python Made Easy'.
+id | first_name |  surname   | location
+--- | --- | --- | ---
+4 | Amanda     | Bertwistle | Nazareth
+2 | Ted        | Burns      | London
+5 | David      | Grewal     |
 
-* Find all the books published by 'No Starch Press'.
+#### Find everyone who has a location specified
 
-* Show a list of every book and their authors (one row per author).
+##### Expected result
 
-* Find all the languages that Ted Burns authored.
+id | first_name |    surname    | location
+--- | --- | --- | ---
+1 | Sharon     | Smith         | Nazareth
+2 | Ted        | Burns         | London
+4 | Amanda     | Bertwistle    | Nazareth
+6 | John       | White         | London
+7 | Paul       | Hallam-Wistle | London
+8 | Paul       | Jones         | Nazareth
+
+#### Find everyone who is not in Nazareth
+
+##### Expected result
+
+id | first_name |    surname    | location
+--- | --- | --- | ---
+2 | Ted        | Burns         | London
+3 | Stephen    | Wistle        |
+5 | David      | Grewal        |
+6 | John       | White         | London
+7 | Paul       | Hallam-Wistle | London
+
+#### Find everyone with 'Wistle' in their surname (bonus points for case insensitivity)
+
+##### Expected result
+
+id | first_name |    surname    | location
+--- | --- | --- | ---
+3 | Stephen    | Wistle        |
+4 | Amanda     | Bertwistle    | Nazareth
+7 | Paul       | Hallam-Wistle | London
+
+#### Find the name of the publisher who released 'Python Made Easy'
+
+##### Expected result
+
+'No Starch Press'
+
+#### Find all the books published by 'No Starch Press'
+
+##### Expected result
+
+name | name
+--- | ---
+McGraw-Hill | Java in Japanese
+McGraw-Hill | Ruby Gems
+McGraw-Hill | CoffeeScript in Java
+McGraw-Hill | Swift in 10 Days
+
+#### Show a list of every book and their authors (one row per author)
+
+##### Expected result
+
+name | first_name | surname
+--- | --- | ---
+Python Made Easy                  | Sharon     | Smith
+Python Made Easy                  | David      | Grewal
+Python Made Easy                  | Amanda     | Bertwistle
+SQL: Part 2                       | Sharon     | Smith
+JavaScript: The Really Good Parts | Stephen    | Wistle
+JavaScript: The Really Good Parts | David      | Grewal
+Java in Japanese                  | Paul       | Jones
+Java in Japanese                  | Ted        | Burns
+Java in Japanese                  | Stephen    | Wistle
+Java in Japanese                  | David      | Grewal
+Java in Japanese                  | Amanda     | Bertwistle
+Elm Street                        | David      | Grewal
+Elm Street                        | John       | White
+Elm Street                        | Sharon     | Smith
+CSS: Cansei                       | Amanda     | Bertwistle
+CSS: Cansei                       | Paul       | Hallam-Wistle
+Ruby Gems                         | Ted        | Burns
+Ruby Gems                         | Paul       | Hallam-Wistle
+C++                               | Paul       | Jones
+C++                               | John       | White
+C++                               | David      | Grewal
+C++                               | Paul       | Jones
+CoffeeScript in Java              | Paul       | Hallam-Wistle
+CoffeeScript in Java              | Paul       | Hallam-Wistle
+Swift in 10 Days                  | Stephen    | Wistle
+Swift in 10 Days                  | David      | Grewal
+
+#### Find all the languages that Ted Burns authored
+
+##### Expected result
+
+'Java in Japanese' and 'Ruby Gems'
 
 ### Intermediate
 
