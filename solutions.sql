@@ -99,3 +99,11 @@ INNER JOIN book_authors
 ON books.id = book_authors.book_id
 GROUP BY books.name
 ORDER BY COUNT(book_authors.book_id) LIMIT 1;
+
+/* Who wrote the most books? How many did they write? */
+
+SELECT authors.first_name, authors.surname, COUNT(book_authors.author_id) AS total FROM authors
+INNER JOIN book_authors
+ON authors.id = book_authors.author_id
+GROUP BY authors.first_name, authors.surname
+ORDER BY total DESC LIMIT 1;

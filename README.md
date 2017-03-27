@@ -262,6 +262,12 @@ Swift in 10 Days     |     2
 Highest: 'Java in Japanese'.
 Lowest: 'SQL: Part 2'
 
+#### Who wrote the most books? How many did they write?
+
+##### Expected result
+
+David Grewal, 6
+
 ### Hard
 
 Doing these is not required! Only look at these if you have time at the end.
