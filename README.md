@@ -1,4 +1,4 @@
-**Author**: [@shiryz](https://github.com/shiryz)  
+**Author**: [@tbtommyb](https://github.com/tbtommyb)  
 
 **Maintainer**: TBC
 
