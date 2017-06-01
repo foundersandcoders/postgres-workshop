@@ -1,3 +1,7 @@
+**Author**: [@shiryz](https://github.com/shiryz)  
+
+**Maintainer**: TBC
+
 # PostgreSQL Workshop
 
 This workshop is designed to build your confidence in querying data using SQL. We will work through some examples as a group before you tackle the challenges in pairs.
