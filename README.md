@@ -10,9 +10,9 @@ This workshop is designed to build your confidence in querying data using SQL. W
 
 We will be working with the dataset in the `data.sql` file. This file contains a set of SQL commands that will create a set of tables and fill them with data. We will connect to the PostgreSQL server running locally on our individual computers and tell it to run the file.
 
-Make sure that you have correctly installed PostgreSQL according to [these instructions](https://github.com/dwyl/learn-postgresql). Check that you can connect to your locally-running database by running `psql` from the command line.
+Make sure that you have correctly installed PostgreSQL according to [these instructions](https://github.com/macintoshhelper/learn-sql/blob/master/postgresql/setup.md). Check that you can connect to your locally-running database by running `psql` from the command line.
 
-If you run into problems, on a Mac using Postgres.app check that you can see a little elephant in the menu bar. On Ubuntu, run `sudo service postgresql restart` and try to connect again.
+If you run into problems, on a Mac using Homebrew, run `brew services restart postgresql` and try to connect again. On Ubuntu, run `sudo service postgresql restart` and try to connect again.
 
 ## Loading the file
 
