@@ -4,7 +4,7 @@
 
 # PostgreSQL Workshop
 
-This workshop is designed to build your confidence in querying data using SQL. We will work through some examples as a group before you tackle the challenges in pairs.
+This workshop is designed to build your confidence in querying data using SQL.
 
 ## Set up
 
@@ -95,8 +95,6 @@ author_id | integer | foreign key (authors.id)
 
 
 ## The challenges
-
-We will work through a couple of challenges as a group before you split into pairs and work through the others. Once everyone's done the introductory ones we will do a couple of harder ones together before working in pairs again.
 
 Please don't feel that you have to get through all of them or be able to answer them all right away! The idea is to introduce you to the kind of queries we do regularly with SQL.
 
