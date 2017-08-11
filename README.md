@@ -211,7 +211,7 @@ CoffeeScript in Java              | Paul       | Hallam-Wistle
 Swift in 10 Days                  | Stephen    | Wistle
 Swift in 10 Days                  | David      | Grewal
 
-#### Find all the languages that Ted Burns authored
+#### Find all the books that Ted Burns authored
 
 ##### Expected result
 
