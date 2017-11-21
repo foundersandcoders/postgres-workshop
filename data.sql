@@ -76,7 +76,7 @@ INSERT INTO book_authors(book_id, author_id) VALUES
   (4, 3),
   (10, 5),
   (8, 6),
-  (8, 8),
+  (8, 1),
   (4, 5),
   (3, 3),
   (5, 1),
@@ -84,7 +84,7 @@ INSERT INTO book_authors(book_id, author_id) VALUES
   (7, 7),
   (1, 4),
   (8, 5),
-  (9, 7),
+  (9, 3),
   (5, 5);
 
 COMMIT;

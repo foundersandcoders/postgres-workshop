@@ -107,3 +107,48 @@ INNER JOIN book_authors
 ON authors.id = book_authors.author_id
 GROUP BY authors.first_name, authors.surname
 ORDER BY total DESC LIMIT 1;
+
+-- I forgot to make a primary key for books_authors table. Alter the table to
+-- create a new column to contain a primary key made up of 'book_id' and 'author_id'.
+
+ALTER TABLE book_authors ADD book_author_id VARCHAR(20);
+UPDATE book_authors SET book_author_id = (Cast(book_id AS VARCHAR(20)) || '-' || Cast(author_id AS VARCHAR(20)));
+ALTER TABLE book_authors ADD PRIMARY KEY (book_author_id);
+
+
+-- What's the average number of authors per book?
+
+SELECT AVG(count)
+FROM (SELECT book_authors.book_id, COUNT(book_authors.author_id)
+FROM book_authors
+GROUP BY book_authors.book_id) AS avg;
+
+-- Show every author who has only written for one publisher.
+
+SELECT authors.first_name, authors.surname, authors.id
+FROM authors
+INNER JOIN book_authors
+ON authors.id = book_authors.author_id
+INNER JOIN books
+ON books.id = book_authors.book_id
+INNER JOIN publishers
+ON publishers.id = books.publisher_id
+GROUP BY authors.first_name, authors.surname, authors.id
+HAVING COUNT(DISTINCT books.publisher_id) = 1;
+
+
+-- Which location has the higher figure for books per author?
+
+SELECT location, AVG(books) FROM (SELECT authors.location, authors.first_name, authors.surname, COUNT(book_authors.book_id) AS books
+FROM authors
+INNER JOIN book_authors
+ON authors.id = book_authors.author_id
+GROUP BY authors.location, authors.first_name, authors.surname
+ORDER BY authors.location) AS average
+GROUP BY location
+ORDER BY avg DESC;
+
+
+-- Let's say you are the first developer at a new start up called 'Amazonia'.
+-- Your boss asks you to modify the database so that customers can add books to their shopping carts.
+-- What tables and associations would you need?

@@ -205,9 +205,9 @@ Ruby Gems                         | Paul       | Hallam-Wistle
 C++                               | Paul       | Jones
 C++                               | John       | White
 C++                               | David      | Grewal
-C++                               | Paul       | Jones
+C++                               | Sharon     | Smith
 CoffeeScript in Java              | Paul       | Hallam-Wistle
-CoffeeScript in Java              | Paul       | Hallam-Wistle
+CoffeeScript in Java              | Stephen    | Wistle
 Swift in 10 Days                  | Stephen    | Wistle
 Swift in 10 Days                  | David      | Grewal
 
@@ -227,13 +227,11 @@ These slightly trickier challenges will require you to use [aggregate functions]
 
 first_name |    surname
 --- | ---
-Paul       | Jones
-Stephen    | Wistle
-Amanda     | Bertwistle
-Sharon     | Smith
-David      | Grewal
 Paul       | Hallam-Wistle
-
+David      | Grewal
+Sharon     | Smith
+Amanda     | Bertwistle
+Stephen    | Wistle
 #### Order the publishers by the number of books they have published.
 
 ##### Expected result
@@ -254,9 +252,9 @@ name | count
 Java in Japanese     |     5
 C++                  |     4
 Elm Street           |     3
-Ruby Gems            |     2
-CoffeeScript in Java |     2
 Swift in 10 Days     |     2
+CoffeeScript in Java |     2
+Ruby Gems            |     2
 
 #### What's the highest number of authors per book? The lowest?
 
@@ -279,8 +277,20 @@ Doing these is not required! Only look at these if you have time at the end.
 
 * What's the average number of authors per book?
 
+##### Expected result
+
+2.6
+
 * Show every author who has only written for one publisher.
 
+##### Expected result
+
+Ted Burns
+
 * Which location has the higher figure for books per author?
+
+##### Expected result
+
+(Undefined), Nazareth
 
 * Let's say you are the first developer at a new start up called 'Amazonia'. Your boss asks you to modify the database so that customers can add books to their shopping carts. What tables and associations would you need?
