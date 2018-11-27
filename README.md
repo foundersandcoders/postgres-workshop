@@ -6,6 +6,26 @@
 
 This workshop is designed to build your confidence in querying data using SQL.
 
+<!--
+contents generated using markdown-toc
+$ npx markdown-toc README.md --no-firsth1 --maxdepth=2
+https://www.npmjs.com/package/markdown-toc
+-->
+## Contents
+  * [Set up](#set-up)
+  * [Loading the file](#loading-the-file)
+  * [psql](#psql)
+  * [Syntax hints](#syntax-hints)
+  * [Schema diagrams](#schema-diagrams)
+    + [Authors](#authors)
+    + [Books](#books)
+    + [Publishers](#publishers)
+    + [Book Authors](#book-authors)
+  * [The challenges](#the-challenges)
+    + [Introductory](#introductory)
+    + [Intermediate](#intermediate)
+    + [Hard](#hard)
+
 ## Set up
 
 We will be working with the dataset in the `data.sql` file. This file contains a set of SQL commands that will create a set of tables and fill them with data. We will connect to the PostgreSQL server running locally on our individual computers and tell it to run the file.
