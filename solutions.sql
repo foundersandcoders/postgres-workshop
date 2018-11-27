@@ -4,7 +4,7 @@ SELECT first_name, surname FROM authors;
 
 /* Sort everyone by surname and find the first three */
 
-SELECT first_name, surname FROM authors ORDER BY surname LIMIT 3;
+SELECT * FROM authors ORDER BY surname LIMIT 3;
 
 /* Find everyone who is not in Nazareth (including nulls) */
 
