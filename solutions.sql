@@ -6,15 +6,15 @@ SELECT first_name, surname FROM authors;
 
 SELECT first_name, surname FROM authors ORDER BY surname LIMIT 3;
 
-/* 3. Find everyone who is not in Nazareth (including nulls) */
+/* 3. Find everyone who has a location specified */
+
+SELECT * FROM authors WHERE location IS NOT NULL;
+
+/* 4. Find everyone who is not in Nazareth (including nulls) */
 
 SELECT * FROM authors
 WHERE location <> 'Nazareth'
 OR location IS NULL;
-
-/* 4. Find everyone who has a location specified */
-
-SELECT * FROM authors WHERE location IS NOT NULL;
 
 /* 5. Find everyone with 'Wistle' in their surname. */
 
