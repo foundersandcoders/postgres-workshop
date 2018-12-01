@@ -6,6 +6,26 @@
 
 This workshop is designed to build your confidence in querying data using SQL.
 
+<!--
+contents generated using markdown-toc
+$ npx markdown-toc README.md --no-firsth1 --maxdepth=2
+https://www.npmjs.com/package/markdown-toc
+-->
+## Contents
+  * [Set up](#set-up)
+  * [Loading the file](#loading-the-file)
+  * [psql](#psql)
+  * [Syntax hints](#syntax-hints)
+  * [Schema diagrams](#schema-diagrams)
+    + [Authors](#authors)
+    + [Books](#books)
+    + [Publishers](#publishers)
+    + [Book Authors](#book-authors)
+  * [The challenges](#the-challenges)
+    + [Introductory](#introductory)
+    + [Intermediate](#intermediate)
+    + [Hard](#hard)
+
 ## Set up
 
 We will be working with the dataset in the `data.sql` file. This file contains a set of SQL commands that will create a set of tables and fill them with data. We will connect to the PostgreSQL server running locally on our individual computers and tell it to run the file.
@@ -102,7 +122,7 @@ Please don't feel that you have to get through all of them or be able to answer 
 
 These challenges cover the basics of SQL: selects, joins and conditions.
 
-#### Find the first name and surname of every author
+#### 1. Find the first name and surname of every author
 
 ##### Expected result
 
@@ -117,7 +137,7 @@ John       | White
 Paul       | Hallam-Wistle
 Paul       | Jones
 
-#### Sort everyone by surname and find the first three
+#### 2. Sort everyone by surname and find the first three
 
 ##### Expected result
 
@@ -127,7 +147,7 @@ id | first_name |  surname   | location
 2 | Ted        | Burns      | London
 5 | David      | Grewal     |
 
-#### Find everyone who has a location specified
+#### 3. Find everyone who has a location specified
 
 ##### Expected result
 
@@ -140,7 +160,7 @@ id | first_name |    surname    | location
 7 | Paul       | Hallam-Wistle | London
 8 | Paul       | Jones         | Nazareth
 
-#### Find everyone who is not in Nazareth (including nulls)
+#### 4. Find everyone who is not in Nazareth (including nulls)
 
 ##### Expected result
 
@@ -152,7 +172,7 @@ id | first_name |    surname    | location
 6 | John       | White         | London
 7 | Paul       | Hallam-Wistle | London
 
-#### Find everyone with 'Wistle' in their surname (bonus points for case insensitivity)
+#### 5. Find everyone with 'Wistle' in their surname (bonus points for case insensitivity)
 
 ##### Expected result
 
@@ -162,13 +182,13 @@ id | first_name |    surname    | location
 4 | Amanda     | Bertwistle    | Nazareth
 7 | Paul       | Hallam-Wistle | London
 
-#### Find the name of the publisher who released 'Python Made Easy'
+#### 6. Find the name of the publisher who released 'Python Made Easy'
 
 ##### Expected result
 
 'No Starch Press'
 
-#### Find all the books published by 'No Starch Press'
+#### 7. Find all the books published by 'No Starch Press'
 
 ##### Expected result
 
@@ -177,7 +197,7 @@ name | name
 No Starch Press | Python Made Easy
 No Starch Press | JavaScript: The Really Good Parts
 
-#### Show a list of every book and their authors
+#### 8. Show a list of every book and their authors
 Note: Only one author per row, so the book's name may need to be repeated.
 
 ##### Expected result
@@ -211,7 +231,7 @@ CoffeeScript in Java              | Stephen    | Wistle
 Swift in 10 Days                  | Stephen    | Wistle
 Swift in 10 Days                  | David      | Grewal
 
-#### Find all the books that Ted Burns authored
+#### 9. Find all the books that Ted Burns authored
 
 ##### Expected result
 
@@ -221,7 +241,7 @@ Swift in 10 Days                  | David      | Grewal
 
 These slightly trickier challenges will require you to use [aggregate functions](https://www.postgresql.org/docs/9.6/static/tutorial-agg.html) and/or [subqueries](https://www.tutorialspoint.com/postgresql/postgresql_sub_queries.htm).
 
-#### Find everyone who wrote at least three books
+#### 10. Find everyone who wrote at least three books
 
 ##### Expected result
 
@@ -232,7 +252,8 @@ David      | Grewal
 Sharon     | Smith
 Amanda     | Bertwistle
 Stephen    | Wistle
-#### Order the publishers by the number of books they have published.
+
+#### 11. Order the publishers by the number of books they have published.
 
 ##### Expected result
 
@@ -243,7 +264,7 @@ The Big Publishing House |     3
 No Starch Press          |     2
 Mega Corp Ltd            |     1
 
-#### Find all books released after 1st Jan 1996, ordered by the number of people who wrote them.
+#### 12. Find all books released after 1st Jan 1996, ordered by the number of people who wrote them.
 
 ##### Expected result
 
@@ -256,14 +277,14 @@ Swift in 10 Days     |     2
 CoffeeScript in Java |     2
 Ruby Gems            |     2
 
-#### What's the highest number of authors per book? The lowest?
+#### 13. What's the highest number of authors per book? The lowest?
 
 ##### Expected results
 
 Highest: 'Java in Japanese'.
 Lowest: 'SQL: Part 2'
 
-#### Who wrote the most books? How many did they write?
+#### 14. Who wrote the most books? How many did they write?
 
 ##### Expected result
 
