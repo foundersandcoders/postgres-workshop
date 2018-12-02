@@ -281,8 +281,9 @@ Ruby Gems            |     2
 
 ##### Expected results
 
-Highest: 'Java in Japanese'.
-Lowest: 'SQL: Part 2'
+Highest: 'Java in Japanese' (5 authors)
+
+Lowest: 'SQL: Part 2' (1 author)
 
 #### 14. Who wrote the most books? How many did they write?
 
@@ -296,22 +297,10 @@ Doing these is not required! Only look at these if you have time at the end.
 
 * I forgot to make a primary key for books_authors table. Alter the table to create a new column to contain a primary key made up of 'book_id' and 'author_id'.
 
-* What's the average number of authors per book?
+* What's the average number of authors per book? (Answer: 2.6)
 
-##### Expected result
+* Show every author who has only written for one publisher. (Answer: Ted Burns)
 
-2.6
-
-* Show every author who has only written for one publisher.
-
-##### Expected result
-
-Ted Burns
-
-* Which location has the higher figure for books per author?
-
-##### Expected result
-
-(Undefined), Nazareth
+* Which location has the higher figure for books per author? (Answer: Nazareth)
 
 * Let's say you are the first developer at a new start up called 'Amazonia'. Your boss asks you to modify the database so that customers can add books to their shopping carts. What tables and associations would you need?
