@@ -197,7 +197,7 @@ name | name
 No Starch Press | Python Made Easy
 No Starch Press | JavaScript: The Really Good Parts
 
-#### 8. Show a list of every book and their authors
+#### 8. Show a list of every book and their authors, ordered by book name
 Note: Only one author per row, so the book's name may need to be repeated.
 
 ##### Expected result
