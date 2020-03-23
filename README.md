@@ -197,37 +197,37 @@ name | name
 No Starch Press | Python Made Easy
 No Starch Press | JavaScript: The Really Good Parts
 
-#### 8. Show a list of every book and their authors
+#### 8. Show a list of every book and their authors, ordered by book name
 Note: Only one author per row, so the book's name may need to be repeated.
 
 ##### Expected result
 
 name | first_name | surname
 --- | --- | ---
-Python Made Easy                  | Sharon     | Smith
-Python Made Easy                  | David      | Grewal
-Python Made Easy                  | Amanda     | Bertwistle
-SQL: Part 2                       | Sharon     | Smith
-JavaScript: The Really Good Parts | Stephen    | Wistle
-JavaScript: The Really Good Parts | David      | Grewal
-Java in Japanese                  | Paul       | Jones
-Java in Japanese                  | Ted        | Burns
-Java in Japanese                  | Stephen    | Wistle
-Java in Japanese                  | David      | Grewal
-Java in Japanese                  | Amanda     | Bertwistle
+C++                               | Sharon     | Smith
+C++                               | John       | White
+C++                               | Paul       | Jones
+C++                               | David      | Grewal
+CSS: Cansei                       | Amanda     | Bertwistle
+CSS: Cansei                       | Paul       | Hallam-Wistle
+CoffeeScript in Java              | Stephen    | Wistle
+CoffeeScript in Java              | Paul       | Hallam-Wistle
 Elm Street                        | David      | Grewal
 Elm Street                        | John       | White
 Elm Street                        | Sharon     | Smith
-CSS: Cansei                       | Amanda     | Bertwistle
-CSS: Cansei                       | Paul       | Hallam-Wistle
-Ruby Gems                         | Ted        | Burns
+Java in Japanese                  | Ted        | Burns
+Java in Japanese                  | Amanda     | Bertwistle
+Java in Japanese                  | Stephen    | Wistle
+Java in Japanese                  | Paul       | Jones
+Java in Japanese                  | David      | Grewal
+JavaScript: The Really Good Parts | Stephen    | Wistle
+JavaScript: The Really Good Parts | David      | Grewal
+Python Made Easy                  | David      | Grewal
+Python Made Easy                  | Sharon     | Smith
+Python Made Easy                  | Amanda     | Bertwistle
 Ruby Gems                         | Paul       | Hallam-Wistle
-C++                               | Paul       | Jones
-C++                               | John       | White
-C++                               | David      | Grewal
-C++                               | Sharon     | Smith
-CoffeeScript in Java              | Paul       | Hallam-Wistle
-CoffeeScript in Java              | Stephen    | Wistle
+Ruby Gems                         | Ted        | Burns
+SQL: Part 2                       | Sharon     | Smith
 Swift in 10 Days                  | Stephen    | Wistle
 Swift in 10 Days                  | David      | Grewal
 
